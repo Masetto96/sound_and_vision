@@ -1,7 +1,18 @@
 # TBD
 
-This project provides a framework for bidirectional communication between SuperCollider and Processing, using Python as an orchestrator. It uses Open Sound Control (OSC) for message passing between the applications.
+Moiré art is an interesting visual technique that creates striking patterns through the interaction of overlapping layers. Here's a concise explanation of the key principles:
 
+Overlapping patterns: Moiré effects occur when two or more repetitive patterns are superimposed with slight offsets or rotations.
+
+Interference: The interaction between the overlapping patterns creates new visual rhythms and illusions of movement.
+
+Line density: The spacing and thickness of lines in each layer affect the resulting moiré pattern.
+
+Angle variation: Changing the angle between overlapping patterns alters the moiré effect dramatically.
+
+Motion illusion: Slight movements or changes in viewing angle can create a sense of motion in static moiré designs.
+
+Optical mixing: At a distance, overlapping patterns can blend to create new perceived colors or tones.
 ## Overview
 
 The system consists of three main components:
