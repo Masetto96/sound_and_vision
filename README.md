@@ -20,7 +20,7 @@ The only requirements are `python-osc` for python, and `oscP5` for processing.
    python orchestrator.py
    ```
    
-   You can use command-line arguments to customize IP addresses and ports:
+   You could use command-line arguments to customize IP addresses and ports but use default ones!
    ```
    python orchestrator.py --sc-ip 127.0.0.1 --sc-port 57120 --processing-ip 127.0.0.1 --processing-port 12000 --py-ip 127.0.0.1 --py-port 5000
    ```
@@ -37,33 +37,11 @@ The only requirements are `python-osc` for python, and `oscP5` for processing.
 2. Create a new sketch and copy the code from `processing_osc_setup.pde`.
 3. Run the sketch.
 
-## Sending Messages
-
-### From Python to SuperCollider or Processing
-Use the command-line interface of the Python orchestrator:
-
-```
-Enter command (sc/proc/quit): sc
-Enter OSC address: /from_processing or /from_supercollider
-Enter message: Hello World
-```
-
 # Human Generated Text
 ## Recap
-For now super collider has a lame gui where you can type some text and it arrives to processing. On the other side, the mouse clicks from processing will be received from supercollider. 
 
-Everything seems to work. We are ready to make some sound and vision with it.
+Some basic stuff:
 
-### Note
-- `orchestrator.py`has implemented a queing system whereas there are no ques in `orch_no_que.py`. 
-- Shall the mapping happen in python? It's easier but I guess not faster.
+- on the super collider side midi notes are played in a sequence and the velocity, which is randomized, is mapped onto the rotation speed of the visuals.
+- on processing side there is the implementation of the optical illusion kinda thing inspired by moire patterns. The keys "i" adn "u" can be pressed to increase the density of the pattern and they will produce an octave shift in the supercollider notes.
 
-## TODOs
-- make some sounds
-- draw some visuals
-- most importantly, define the *mapping of the parameters*
-- improve servers handling and this software dev stuff
-- *already* refactor orchestrator
-
-## Known Issues
-- multiple servers in super collider causing messages to be received more than once.
