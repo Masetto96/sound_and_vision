@@ -51,22 +51,13 @@ Enter message: Hello World
 # Human Generated Text
 
 ## Recap
+Receives x and y coordinates from the mouse from processing and sends them to supercollider, mapeped onto synth params.
+The mix parameter is controlled by the x coordinate, the numharm parameter is controlled by the y coordinate.
 
-### SC - *osc_synth.scd*
-Receives x and y coordinates from the mouse clicks from processing.
+The frequency in Hz played by the synth in sc will be sent to processing and it will change the background color.
 
-The mix parameter is controlled by the x coordinate, ranging from 0 to 1.
-The numharm parameter is controlled by the y coordinate, ranging from 1 to 100 harmonics.
-
-### Note
-- Shall the mapping happen in python? It's easier but I guess not faster.
-
-## TODOs
-- make some sounds
-- draw some visuals
-- most importantly, define the *mapping of the parameters*
-- improve servers handling and this software dev stuff
-- *already* refactor orchestrator
+### Processing *colors_and_mouse.pde*
+### SC - *osc_synth_with_colors.scd*
 
 ## Known Issues
 - multiple servers in super collider causing messages to be received more than once.
