@@ -27,13 +27,17 @@ void oscEvent(OscMessage message) {
 }
 
 // Function to send OSC message to Python (which will forward to SuperCollider)
-void sendToSupercollider(String message) {
+void sendToSupercollider(float x, float y) {
+  float normalizedX = x / width;
+  float normalizedY = y / height;
+  
   OscMessage oscMessage = new OscMessage("/from_processing");
-  oscMessage.add(message);
+  oscMessage.add(normalizedX);
+  oscMessage.add(normalizedY);
   oscP5.send(oscMessage, pythonLocation);
 }
 
 // Example: send a message when mouse is clicked
 void mousePressed() {
-  sendToSupercollider("Mouse clicked at " + mouseX + ", " + mouseY);
+  sendToSupercollider(mouseX, mouseY);
 }

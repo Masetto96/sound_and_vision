@@ -49,13 +49,16 @@ Enter message: Hello World
 ```
 
 # Human Generated Text
-## Recap
-For now super collider has a lame gui where you can type some text and it arrives to processing. On the other side, the mouse clicks from processing will be received from supercollider. 
 
-Everything seems to work. We are ready to make some sound and vision with it.
+## Recap
+
+### SC - *osc_synth.scd*
+Receives x and y coordinates from the mouse clicks from processing.
+
+The mix parameter is controlled by the x coordinate, ranging from 0 to 1.
+The numharm parameter is controlled by the y coordinate, ranging from 1 to 100 harmonics.
 
 ### Note
-- `orchestrator.py`has implemented a queing system whereas there are no ques in `orch_no_que.py`. 
 - Shall the mapping happen in python? It's easier but I guess not faster.
 
 ## TODOs
