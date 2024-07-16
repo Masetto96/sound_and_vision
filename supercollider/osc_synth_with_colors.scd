@@ -53,5 +53,5 @@ s.waitForBoot({
 });
 )
 
-// Example usage:
-// ~changeFreq.value(400); // Change frequency to 440 Hz
+/*// Example usage:
+~changeFreq.value(5020); // Change frequency to 440 Hz*/
